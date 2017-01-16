@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="w-100">
+
+<head>
+    <meta charset="utf-8">
+    <title>Css3 Images Fade & Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="lib/style/base.css">
+    <script src="lib/js/slider.js"></script>
+    <style type="text/css">
+    body{
+        overflow: hidden;
+    }
+    #wrapper{
+        height: 100%;
+    }
+        .slider-panel li{
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            overflow: hidden;
+        }
+        #main{
+            padding-top: 45px;
+            position: relative;
+        }
+
+        .slider-panel:after {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 50%;
+        }
+        .slider-tab li{
+            display: inline-block;
+            margin-right: 10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background: #fff;
+            border: 1px solid #000;
+        }
+        
+        .slider-tab{
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+        }
+        .slider-tab .active{
+            background: #888;
+        }
+    </style>
+    <script>
+    
+    </script>
+</head>
+
+<body onload="loaded();" class="w-100">
+<header class="fixed">isscroll</header>
+   <div id="main">
+     <div id="wrapper">
+        <ul class="slider-panel por">
+            <li>
+                <img src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg"/>
+            </li>
+            <li>
+                <img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg"/>
+            </li>
+             <li>
+                <img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg"/>
+            </li>
+        </ul>
+        <ul class="slider-tab">
+            <li data-index="0">
+                <a ></a>
+            </li>
+              <li data-index="1">
+                <a ></a>
+            </li>
+              <li data-index="2">
+                <a ></a>
+            </li>
+        </ul>
+     </div>
+   </div>
+   <footer class="fixed pos-bottom c-fff w-100 t-c">底部按钮</footer>
+</body>
+<script type="text/javascript">
+   function loaded(){
+        new Slider("#wrapper",{
+            lazyLoad:false,
+            duration:0.5
+        })
+    }
+   
+</script>
+</html>

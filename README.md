@@ -1,6 +1,5 @@
 # mobile
-#第一个测试啊
-#第二个测试啊
+#平时的一些小的练手效果
 > A Vue.js project
 
 ## Build Setup
