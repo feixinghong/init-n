@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Css3 Images Fade & Slider</title>
+    <link rel="stylesheet" href="base.css">
+    <script type="text/javascript" src="iscroll.js"></script>
+    <style type="text/css">
+    body {
+        background: #f8f8f8;
+        margin: 0;
+    }
+    
+    img {
+        border: 0;
+        vertical-align: middle;
+    }
+    
+    .focus {
+        /*width: 800px;*/
+        /*margin: 0 auto;*/
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .images {
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .images .item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 350px;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.8s linear;
+        -webkit-transition: opacity 0.8s linear;
+    }
+    
+    .images .item img {
+        width: 800px;
+    }
+    
+    .images .active {
+        opacity: 1;
+    }
+    
+    .control {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .control span {
+        display: inline-block;
+        cursor: pointer;
+        background: #5fbab1;
+        color: #fff;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        border-radius: 25px;
+        margin: 0 8px;
+    }
+    
+    .control span.active {
+        background: #e77918;
+    }
+    
+    .title {
+        position: absolute;
+        left: 0;
+        top: 30%;
+        width: 100%;
+    }
+    
+    .title p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #000;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 20px 0;
+        margin: 0;
+        text-indent: 10px;
+        width: 300px;
+        opacity: 0;
+        transform: translateX(-300px);
+        -webkit-transform: translateX(-300px);
+        transition: all 0.8s ease-out;
+        -webkit-transition: all 0.8s ease-out;
+    }
+    
+    .title p.active {
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+    #header{
+        line-height: 45px;
+        height: 45px;
+        top: 0px;
+        position: fixed;
+        left: 0px;
+        width: 100%;
+        background: #cd235c;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+    }
+    #pullDown{
+        height: 45px;
+        line-height: 45px;
+
+    }
+    #main li{
+        border: 1px solid #888;
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-top: 10px;
+    }
+    footer{
+        height: 45px;
+        line-height: 45px;
+        background: #888;
+    }
+
+
+    #scroller {
+        position: absolute;
+        z-index: 1;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        width: 100%;
+      
+    }
+    #wrapper{
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+    }
+    </style>
+    <script>
+    
+    </script>
+</head>
+
+<body onload="loaded();">
+<header class="fixed">isscroll</header>
+   <div id="main">
+     <div id="wrapper">
+        <div id="scroller">
+            <div id="pullDown" class="t-c">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">Pull down to refresh...</span>
+            </div>
+            <ul class="p-lr-5">
+                <li>第一条</li>
+                <li>第2条</li>
+                <li>第3条</li>
+                <li>第4条</li>
+                <li>第5条</li>
+                <li>第6条</li>
+                <li>第7条</li>
+                <li>第8条</li>
+                <li>第9条</li>
+                <li>第一条</li>
+                <li>第一条</li>
+                <li>第一条</li>
+                 <li>第一条</li>
+                <li>第2条</li>
+                <li>第3条</li>
+                <li>第4条</li>
+                <li>第5条</li>
+                <li>第6条</li>
+                <li>第7条</li>
+                <li>第8条</li>
+                <li>第9条</li>
+                <li>第一条</li>
+                <li>第一条</li>
+                <li>第一条</li>
+                 <li>第一条</li>
+                <li>第2条</li>
+                <li>第3条</li>
+                <li>第4条</li>
+                <li>第5条</li>
+                <li>第6条</li>
+                <li>第7条</li>
+                <li>第8条</li>
+                <li>第9条</li>
+                <li>第一条</li>
+                <li>第一条</li>
+                <li>第一条</li>
+                 <li>第2条</li>
+                <li>第3条</li>
+                <li>第4条</li>
+                <li>第5条</li>
+                <li>第6条</li>
+                <li>第7条</li>
+                <li>第8条</li>
+                <li>第9条</li>
+                <li>第一条</li>
+                <li>第一条</li>
+                <li>第一条</li>
+            </ul>
+        </div>
+     </div>
+   </div>
+   <footer class="fixed pos-bottom c-fff w-100 t-c">底部按钮</footer>
+</body>
+<script type="text/javascript">
+    
+    var myScroll;
+
+    function loaded () {
+        document.querySelector("#wrapper").style.height=window.innerHeight-document.querySelector('header').getBoundingClientRect().height-document.querySelector('footer').getBoundingClientRect().height+'px'
+        myScroll = new IScroll('#wrapper', { mouseWheel: true, click: true ,hScroll:false,bounceEasing:"elastic"});
+    }
+
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+</script>
+</html>

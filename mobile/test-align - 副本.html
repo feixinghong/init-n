@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#drag{
+		  width:200px;
+		  height:200px;
+		  border:1px solid #888;
+		}
+	</style>
+	<script type="text/javascript">
+		document.write("<script defer charset='utf-8' src='test.js'> <\/script>");
+		document.addEventListener('DOMContentLoaded', function(){
+		  console.log("DOMContentLoaded")
+		 setTimeout(function(){
+		 	console.log(window.performance.timing.loadEventEnd)
+		 },4000) 
+		});
+
+		document.onload=function(){
+			console.log("ready");
+
+		}
+		window.addEventListener('load',function(){
+			setTimeout(function(){
+				console.log(window.performance.timing.loadEventEnd)
+			},100)
+		})
+	</script>
+
+</head>
+<body>
+	<div id="drag"></div>
+	<div id="preview"></div>
+	<canvas id="canvas"></canvas>
+</body>
+
+ <script type="text/javascript">
+ 	window.onload=function(){
+ 		console.log("ready")
+ 		document.ondragleave=function(e){    //拖离 
+ 		           e.preventDefault(); 
+ 		       };
+ 		document.ondrop=function(e){    //拖离 
+ 		           e.preventDefault(); 
+ 		       }
+ 		document.ondragenter=function(e){    //拖离 
+ 		           e.preventDefault(); 
+ 		       };
+ 		document.ondragover=function(e){    //拖离 
+ 		           e.preventDefault(); 
+ 		       }
+ 		  
+ 		document.querySelector("#drag").addEventListener("dragenter",function(e){
+ 			e.preventDefault();
+ 			console.log(e.dataTransfer.files);
+ 			var fileList=e.dataTransfer.files;
+ 			var img = window.webkitURL.createObjectURL(fileList[0]); 
+	       var filename = fileList[0].name; //图片名称 
+	       var filesize = Math.floor((fileList[0].size)/1024);  
+	       if(filesize>500){ 
+	           alert("上传大小不能超过500K."); 
+	           return false; 
+	       } 
+	       var str = "<img src='"+img+"'><p>图片名称："+filename+"</p><p>大小："+filesize+"KB</p>"; 
+	      document.querySelector("#preview").innerHTML=str; 
+ 		},false);
+ 		var high_quality=true;
+ 		var canvas=document.getElementById('canvas');
+ 		var gl=canvas.getContext("webgl",  {
+        		antialias:  true ,
+		        //premultipliedAlpha: false,
+		        extensions: high_quality ? ['WEBKIT_EXT_texture_filter_anisotropic'] : [],
+		        shaderSources: [
+		            'all-shaders.glsl',
+		            '/assets/map/shaders/demo-shaders.glsl'
+		        ],
+		    });
+ 		var source=`
+			void main(){
+				gl_position=vec4(0.0,0.0,0.0,1.0);
+				gl_PointSize=10.0;
+			}
+ 		`
+ 		var source1=`
+			void main(){
+				gl_FragColor=vec4(1.0,0.0,0.0,1.0);
+			};
+ 		`
+ 		// gl.drawColor(1.0,0.0,0.0,1.0);
+ 		// gl.drawPoint(0,0,0,10);
+
+
+}
+ </script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fastclick</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!-- <script src="fastclick.js"></script> -->
+	<style>
+		.shadow{
+			display: inline-block;
+			padding: 5px 10px;
+			border: 1px solid
+		}
+		a,button,input,textarea { 
+		    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+		   
+		}
+		html,body {-webkit-user-select:none; user-select: none; }
+		a,img { -webkit-touch-callout: none }   
+	</style>
+</head>
+<body>
+	<div id="test">这是一个div</div>
+	<a href="mailto:863139978@qq.com?body=http://www.baidu.com">点击我发邮件</a>
+
+	// 一、打电话
+<a href="tel:0755-10086">打电话给:0755-10086</a>
+
+//  二、发短信，winphone系统无效
+<a href="sms:1008667">发短信给: 10086</a>
+<h2>点击元素产生背景或者边框</h2>
+<a href="##" class="shadow">测试阴影</a>
+</body>cc
+<script>
+	window.onload=function(){
+		var test=document.querySelector("#test");
+		var t=new Date();
+		test.ontouchend=function(){
+ 			t=+new Date();
+		}
+		test.onclick=function(){
+			alert(+new Date()-t);
+		}
+	}
+
+	function isWeixin(){
+	    var ua = navigator.userAgent.toLowerCase();
+	    if(ua.match(/MicroMessenger/i)=='micromessenger'){
+	        return true;
+	    }else{
+	        return false;
+	    }
+	}
+	if(isWeixin()){
+		alert(navigator.userAgent.toLowerCase())
+	}
+</script>
+</html>

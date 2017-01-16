@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box-flex</title>
+	<link rel="stylesheet" href="base.css">
+</head>
+<style type="text/css">
+	.main{
+	   display: -webkit-box;
+	   display: -moz-box;
+	   display: -ms-box;
+	   display: box;
+	   height: 300px;
+
+	}
+	.box-v{
+		-webkit-box-orient: vertical;
+	}
+	
+	.box-dir-nor{
+		-webkit-box-direction: normal;
+	}
+	.box-dir-rev{
+		-webkit-box-direction: reverse;
+	}
+	.sec-1{
+		-webkit-box-flex:3;
+		-moz-box-flex:3;
+		-ms-box-flex:3;
+		box-flex:3;
+		background: red;
+	}
+	.sec-2{
+		-webkit-box-flex:1;
+		-moz-box-flex:1;
+		-ms-box-flex:31;
+		box-flex:1;
+		background: yellow;
+		width: 100px;
+	}
+	.sec-3{
+		-webkit-box-flex:1;
+		-moz-box-flex:1;
+		-ms-box-flex:1;
+		box-flex:1;
+		background: blue;
+	}
+</style>
+<body>
+	<h1>css3属性学习 box-sizing:为了实现布局的垂直等高、水平均分、按比例划分 </h1>
+	<span>给父元素设置了display:box;然后子元素有box-flex 即可 。比如都设为1 则每个占总的1/3</span>
+	<div class="main box-v box-dir-rev">
+		<section class="sec-1">1</section>
+		<section class="sec-2">2</section>
+		<section class="sec-3">3</section>
+	</div>
+	<span>子元素有一个设为固定宽度的话，或者左右margin的话，那么剩下的宽度从里面减去 </span>
+	<span>box-align 规定上下方向上的对其，比如 居顶,居底，居中，stretch </span>
+	<span>box-pack 父元素里面子元素的水平对其方式 有水平居左，水平居中</span>
+</body>
+</html>

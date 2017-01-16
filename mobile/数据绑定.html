@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+    <p>你好，<span id='nickName'></span></p>
+    <div id="introduce"></div>
+</div>　
+</body>
+<script>
+	//视图控制器
+	var userInfo = {"nickName":"","introduce":''};
+	Object.defineProperty(userInfo, "nickName", {
+	    get: function nickg(){
+	        return document.getElementById('nickName').innerHTML;
+	    },
+	    set: function nicks(nick){
+	        document.getElementById('nickName').innerHTML = nick;
+	    }
+	});
+	Object.defineProperty(userInfo, "introduce", {
+	    get: function(){
+	        return document.getElementById('introduce').innerHTML;
+	    },
+	    set: function(introduce){
+	        document.getElementById('introduce').innerHTML = introduce;
+	    }
+	})
+</script>
+</html>
