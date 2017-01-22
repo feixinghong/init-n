@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Css3 Images Fade & Slider</title>
+    <script type="text/javascript" src="iscroll.js"></script>
+    <style type="text/css">
+    body {
+        background: #f8f8f8;
+        margin: 0;
+    }
+    
+   
+    #wrapper{
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+    }
+    #scroller{
+        width: 300px;
+        border: 1px solid #888;
+        height: 300px;
+        text-align: center;
+    }
+
+    .img-slider:after{
+        display:block;
+        clear: both;
+        visibility: hidden;
+    }
+    .img-slider{
+        position: relative;
+        }
+     .icon{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: url(images/icon_del.png);
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        cursor: pointer;
+    }
+    .drop-area{
+        text-align: center;
+    }
+    </style>
+    <script>
+    
+    </script>
+</head>
+
+<body onload="loaded();">
+<header class="fixed">拖放</header>
+   <div id="main">
+     <div id="wrapper">
+        <div id="scroller" class="drop-area">
+         拖到这里来
+          
+        </div>
+        <div class="desc">
+            <ul class="img-slider">
+                <li><img src="1.jpg"/>
+                        <i class="delete icon"></i>
+                </li>
+            </ul>
+        </div>
+        <div id="cmd">
+            <a href="javascript:;" id="upload">提交</a>
+        </div>
+     </div>
+   </div>
+</body>
+<style type="">
+    .img-slider li{
+      width: 200px;
+      margin-right: 10px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .img-slider img{
+      width:100%;
+    }
+
+ </style>
+<script type="text/javascript">
+
+    function loaded () {
+        var scro=document.querySelector("#scroller");
+
+       /*option：
+            {
+                drop_area_class:
+                display_img_class:
+
+            }
+       */
+        var DragUpload=function(id,option){
+            return {
+                init:function(){
+                    var c=this;
+                    c=_stop_default_events();
+                },
+                // 阻止默认事件
+                _stop_default_events:function(){
+                    document.ondrop=function(e){
+                        e.preventDefault();
+                    };
+
+                    document.ondragenter=function(e){
+                        e.preventDefault();
+                    }
+
+                    document.ondragenter=function(e){
+                        e.preventDefault();
+                    }
+
+                    document.ondragover=function(e){
+                        e.preventDefault();
+                    }
+                }, 
+               
+                bind_events:function(){
+                    scro.ondrop=function(e){
+                        console.log(e.dataTransfer.files);
+                        var files=e.dataTransfer.files;
+                        var URL= DragUpload.util.get_URL();
+                        if(!URL){
+                            alert("你的浏览器不支持!");
+                            return;
+                        }
+
+                        if( !files.length){
+                            return;
+                        }
+
+                        var param={};
+
+                        param.src=URL.createObjectURL(files[0]);
+
+                       var li= document.querySelector("#desc ul").appendChild(document.createElement("li")),img=null,span=null;
+                       var fragment=document.createDocumentFragment();
+
+                       var img=document.createElement('img');
+                       img.src=imgurl;
+                       fragment.appendChild(img);
+                       fragment.appendChild(span=document.createElement("span"),span.classList.add("delete"),span.innerText='删除',span);
+                       li.appendChild(fragment);
+
+
+                    }
+                },
+                init:function(){
+                    var c=this;
+                    c._stop_default_events();
+
+                }
+            }
+        };
+
+        DragUpload.util={
+            get_URL:function(){
+                return window.webkitURL || window.URL ;
+            },
+             _validate:function(type){
+                    type=type || '';
+                    if(type.indexOf('img')!=-1){
+                        return true;
+                    }else{
+                        alert('必须上传图片');
+                        return false;
+                    }
+
+            }
+        }
+        scro.ondrop=function(e){
+            console.log(e.dataTransfer.files);
+            var files=e.dataTransfer.files;
+
+           
+            var imgurl=window.webkitURL.createObjectURL(files[0]);
+           var li= document.querySelector("#desc ul").appendChild(document.createElement("li")),img=null,span=null;
+           var fragment=document.createDocumentFragment();
+
+           var img=document.createElement('img');
+           img.src=imgurl;
+           fragment.appendChild(img);
+           fragment.appendChild(i=document.createElement("i"),i.classList.add("delete"),i.innerText='删除',i);
+           li.appendChild(fragment);
+
+
+        }
+        var desc=document.querySelector("#desc");
+
+        desc.addEventListener("click",function(e){
+            if(e.target.classList.contains("delete")){
+                desc.removeChild( e.target.parentNode );
+            }
+        },false);
+
+        document.querySelector("#upload").addEventListener("click",function(){
+            alert("ajax");
+        },false)
+    }
+
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+</script>
+</html>
