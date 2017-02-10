@@ -1,0 +1,179 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../lib/jquery.js"></script>
+	<style type="text/css">
+	    *{
+	    	margin: 0px;
+	    	padding: 0px;
+	    }
+	    li{
+	    	list-style-type: none;
+	    }
+	    a{
+	    	text-decoration: none;
+	    }
+		.outer{
+			height: 10px;
+			border-radius: 5px;
+			background: rgba(0, 0, 0, 0.33);
+
+		}
+		.inner{
+			height: 100%;
+			background: #4CAF50;
+			transition: width 0.5s;
+			border-radius: 5px;
+			width: 0px;
+		}
+		._top{
+
+		}
+		.side-nav{
+			width: 74px;
+			position: fixed;
+			top: 20%;
+			left: 5%;	
+		}
+		.side-nav li{
+			padding: 3px 4px;;
+			text-align: center;
+			font-weight: bold;
+			border-bottom:1px solid #b1aaaa;
+			background: #918888;
+			cursor: pointer;
+			
+		}
+		.side-nav li.active,.side-nav li:hover{
+			background: #d70b1c;
+			border-bottom: 1px solid #d70b1c ;
+		}
+		.side-nav  a{
+			color: #fff;
+			    font-size: 12px;
+			    line-height: 26px;
+		}
+		[data-tag]{
+			height: 500px;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="outer" id="outer">
+		<div class="inner" id="inner"></div>
+	</div>
+	<div class="side-nav" id="side-nav">
+		<ul>
+			<li data-index="1">
+				<a href="javascript:;">享品质</a>
+			</li>
+			<li  data-index="2">
+				<a href="javascript:;">服饰美妆</a>
+			</li><li data-index="3">
+				<a href="javascript:;">家电手机</a>
+			</li><li data-index="4">
+				<a href="javascript:;">电脑数码</a>
+			</li><li data-index="5">
+				<a href="javascript:;">3C运动</a>
+			</li><li data-index="6">
+				<a href="javascript:;">爱吃</a>
+			</li><li data-index="7">
+				<a href="javascript:;">母婴家居</a>
+			</li><li data-index="8">
+				<a href="javascript:;">虚拟</a>
+			</li><li data-index="9">
+				<a href="javascript:;">还没逛够</a>
+			</li><li class="_top" >
+				<a href="javascript:;">顶部</a>
+			</li>
+		</ul>
+	</div>
+	<div class="content" id="jd-content">
+		<div data-tag="f1">
+			<h1>享品质</h1>
+		</div>
+		<div data-tag="f2">
+			<h1>服饰美妆</h1>
+		</div>
+		<div data-tag="f3">
+			<h1>家电手机</h1>
+			<div id="tab" class="tab">
+				<ul>
+					<li>新闻</li>
+					<li>电视</li>
+					<li>移动</li>
+				</ul>
+			</div>
+			<div id="content" class="content">
+				<div data-index='0'></div>
+				<div data-index='1'></div>
+				<div data-index='2'></div>
+			</div>
+		</div>
+		<div data-tag="f4">
+			<h1>电脑数码</h1>
+		</div>
+		<div data-tag="f5">
+			<h1>3C运动</h1>
+		</div>
+		<div data-tag="f6">
+			<h1>爱吃</h1>
+		</div>
+		<div data-tag="f7">
+			<h1>母婴家居</h1>
+		</div>
+		<div data-tag="f8">
+			<h1>虚拟</h1>
+		</div>
+		<div data-tag="f9">
+			<h1>还没逛够</h1>
+		</div>
+		<div data-tag="top">
+			<h1>顶部</h1>
+		</div>
+	</div>
+</body></html>
+
+<script type="text/javascript">
+//实现按照进度进行滚动动画
+	function set_width(curr,total,dom){
+		if(curr>total){
+			curr=total;
+		}
+
+		var percent=(curr/total)*100+"%";
+
+		dom.style.width=percent;
+	};
+
+	// 'transition' in document.body.style
+
+	$(function(){
+		$('body').on('scroll',function(){
+			var top=document.body.scrollTop;
+			if()
+		});
+		$("#side-nav").on("click","[data-index]",function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			var ind=$(this).data("index")||1,$dom=$("#jd-content").find("[data-tag=f"+ind+"]");
+			var top=$dom[0].offsetTop;
+			$('body').animate({
+				scrollTop:top
+			},1000)
+		}).on('mouseleave mouseenter','li',function(event){
+			// var type=event.type;
+
+			// if(type=='mouseleave'){
+			// 	$(this).removeClass('active');
+			// }
+			// if(type=='mouseenter'){
+			// 	$(this).addClass('active');
+			// }
+		});
+
+
+	})
+</script>

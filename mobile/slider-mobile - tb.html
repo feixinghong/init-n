@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Css3 Images Fade & Slider</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="lib/style/base.css">
+    <link rel="alternate stylesheet" href="lib/style/base.css">
     <script src="lib/js/slider.js"></script>
     <style type="text/css">
     body{
@@ -13,6 +13,9 @@
     }
     #wrapper{
         height: 100%;
+    }
+    #main{
+        height: 521px;
     }
         .slider-panel li{
             width: 100%;
@@ -23,7 +26,6 @@
             overflow: hidden;
         }
         #main{
-            padding-top: 45px;
             position: relative;
         }
 
@@ -51,30 +53,64 @@
         .slider-tab .active{
             background: #888;
         }
+        .slider-panel li{
+            height: 100%;
+
+        }
+
+        .outer{
+            height: 2px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.33);
+
+        }
+        .inner{
+            height: 100%;
+            background: #4CAF50;
+            transition: width 0.5s;
+            border-radius: 5px;
+            width: 0px;
+        }
+        .progress{
+            bottom: 10px;
+            padding: 0px 20px;
+        }
     </style>
-    <script>
-    
-    </script>
+   <style type="text/css">
+       a:visited{
+         font-weight:bold;
+         font-size:20px;
+         color:yellow;
+       }
+       a:link:hover{color:red}
+       a:visited:hover{color:green}
+   </style>
 </head>
 
 <body onload="loaded();" class="w-100">
-<header class="fixed">isscroll</header>
+    <div>test</div>
+   <div class="link">
+       <a href="#a">百度</a>
+       <a href="#b">腾讯</a>
+       <a href="#c">阿里</a>
+       <input type="text" name="" value="90">
+   </div>
    <div id="main">
      <div id="wrapper">
-        <ul class="slider-panel por">
+        <ul class="slider-panel por h-100">
             <li>
-                <img src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg"/>
+                page1
             </li>
             <li>
-                <img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg"/>
+               page2
             </li>
              <li>
-                <img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg"/>
+                page3
             </li>
         </ul>
         <ul class="slider-tab">
             <li data-index="0">
-                <a ></a>
+                <a></a>
             </li>
               <li data-index="1">
                 <a ></a>
@@ -85,15 +121,37 @@
         </ul>
      </div>
    </div>
-   <footer class="fixed pos-bottom c-fff w-100 t-c">底部按钮</footer>
+   <section id="progress" class="progress fixed w-100">
+       <div class="outer" id="outer">
+            <div class="inner" id="inner"></div>
+        </div>
+   </section>
 </body>
 <script type="text/javascript">
+    function set_width(curr,total,dom){
+            if(curr>total){
+                curr=total;
+            }
+
+            var percent=(curr/total)*100+"%";
+
+            dom.style.width=percent;
+        };
    function loaded(){
         new Slider("#wrapper",{
             lazyLoad:false,
             duration:0.5,
-            fallback:function(obj){
-                console.log(obj)
+            direction:'v',
+            auto_play:false,
+            onEnter:function(curr,total){
+                console.log('enter');
+                curr=curr+1;
+                set_width(curr,total,document.querySelector('#inner'));
+
+                this.classList.add('active');
+            },
+            onLeave:function(){
+                 this.classList.remove('active');
             }
         })
     }

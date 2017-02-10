@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="w-100">
+
+<head>
+    <meta charset="utf-8">
+    <title>Css3 Images Fade & Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="lib/style/base.css">
+    <style type="text/css">
+    body{
+        overflow: hidden;
+    }
+  
+    </style>
+</head>
+
+<body onload="loaded();" class="w-100">
+
+</body>
+<script type="text/javascript">
+    //解析xml数据  可以当作htmldocument来进行处理
+        $.ajax({
+                url:"a.xml",
+                type:"GET",
+                dataType:"xml",
+                success:function(xml){
+                var htmlData="<table border='1'>";
+                $(xml).find('student').each(function(){
+                  var $student = $(this);
+                  var name = $student.find('name').text();
+                  var num = $student.find('num').text();
+                  var sex = $student.find('sex').text();
+                  var age = $student.find('age').text();
+                  var dept = $student.find('dept').text();
+                  htmlData += '<tr>'+'<td>'+name+'</td>'+'<td>'+num+'</td>'+'<td>'+sex+'</td>'+'<td>'+age+'</td>'+'<td>'+dept+'</td>'+'</tr>';
+                });
+                htmlData+="</table>";
+                $("body").append(htmlData);
+              },
+            });
+</script>
+</html>

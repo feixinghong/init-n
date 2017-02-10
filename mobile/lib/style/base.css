@@ -2777,6 +2777,177 @@ header > .header-home{
     -webkit-animation: fadeOutUp 1s linear;
     animation: fadeOutUp 1s linear;
 }
+
+@-webkit-keyframes puffIn {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(2,2);
+        -webkit-filter: blur(2px)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(1,1);
+        -webkit-filter: none
+    }
+}
+
+@keyframes puffIn {
+    0% {
+        opacity: 0;
+        transform-origin: 50% 50%;
+        transform: scale(2,2);
+        filter: blur(2px)
+    }
+
+    100% {
+        opacity: 1;
+        transform-origin: 50% 50%;
+        transform: scale(1,1);
+        filter: none
+    }
+}
+
+.puffIn {
+    -webkit-animation-name: puffIn 5s;
+    animation:puffIn 5s;
+}
+
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,90deg);
+        transform: perspective(400px) rotate3d(1,0,0,90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,-20deg);
+        transform: perspective(400px) rotate3d(1,0,0,-20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,10deg);
+        transform: perspective(400px) rotate3d(1,0,0,10deg);
+        opacity: 1
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,-5deg);
+        transform: perspective(400px) rotate3d(1,0,0,-5deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px)
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,90deg);
+        transform: perspective(400px) rotate3d(1,0,0,90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,-20deg);
+        transform: perspective(400px) rotate3d(1,0,0,-20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,10deg);
+        transform: perspective(400px) rotate3d(1,0,0,10deg);
+        opacity: 1
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1,0,0,-5deg);
+        transform: perspective(400px) rotate3d(1,0,0,-5deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px)
+    }
+}
+
+.flipInX {
+    -webkit-animation-name: flipInX 5s;
+    animation:flipInX 5s;
+}
+
+@-webkit-keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0,0,1,15deg);
+        transform: rotate3d(0,0,1,15deg)
+    }
+
+    40% {
+        -webkit-transform: rotate3d(0,0,1,-10deg);
+        transform: rotate3d(0,0,1,-10deg)
+    }
+
+    60% {
+        -webkit-transform: rotate3d(0,0,1,5deg);
+        transform: rotate3d(0,0,1,5deg)
+    }
+
+    80% {
+        -webkit-transform: rotate3d(0,0,1,-5deg);
+        transform: rotate3d(0,0,1,-5deg)
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0,0,1,0deg);
+        transform: rotate3d(0,0,1,0deg)
+    }
+}
+
+@keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0,0,1,15deg);
+        transform: rotate3d(0,0,1,15deg)
+    }
+
+    40% {
+        -webkit-transform: rotate3d(0,0,1,-10deg);
+        transform: rotate3d(0,0,1,-10deg)
+    }
+
+    60% {
+        -webkit-transform: rotate3d(0,0,1,5deg);
+        transform: rotate3d(0,0,1,5deg)
+    }
+
+    80% {
+        -webkit-transform: rotate3d(0,0,1,-5deg);
+        transform: rotate3d(0,0,1,-5deg)
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0,0,1,0deg);
+        transform: rotate3d(0,0,1,0deg)
+    }
+}
+
+.swing {
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing
+}
+
 /****************---animation 部分end---*************************/
 
 /***********以下是延时*********************/

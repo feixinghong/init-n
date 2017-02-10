@@ -2,11 +2,23 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style type="text/css">
-		.outer{
-			padding: 10px;
+		.outer,.lx{
 			color: #fff;
 			position: relative;
-			width: 50px;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+		}
+		
+		ul{
+			list-style-type: none;
+		}
+		ul li{
+			margin-top: 20px;
+		}
+		.outer::after{
+    		transform: skewX(-45deg);
 		}
 		.outer::after{
 			background: #888;
@@ -15,11 +27,29 @@
 			top: 0px;
 			left: 0px;right: 0px;bottom: 0px;
 			z-index: -1;
-    		transform: skewX(-45deg);
+		}
+
+		.lx{	
+			overflow: hidden;;
+			 transform: rotateZ(-45deg) ;
+		}
+		.lx img{
+			transform: rotateZ(45deg) scale(1.42);
+			max-width: 100%;
 		}
 	</style>
 </head>
 <body>
-	 <div class="outer">呵呵呵</div>
-
+	<ul>
+		<li>
+			 <div class="outer">平行</div>
+		</li>
+		<li>
+		<h3>基于变形的方案</h3>
+		<div class="lx">
+			<img src="https://img.alicdn.com/bao/uploaded/i4/362142518/TB2kfXQtpXXXXbzXXXXXXXXXXXX_!!362142518.jpg_220x220.jpg">
+		</div></li>
+	</ul>
+	
+	
 </body></html>

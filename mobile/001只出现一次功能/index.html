@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>发</title>
+</head>
+<body>
+   
+</body>
+<script type="text/javascript">
+	var tip=(function(){
+	  var key='tip';
+	  return ({
+	    init:function(){
+	       var tip_info=localStorage.getItem(key);
+
+	       this.bindEvent();
+
+	       if(!tip_info){
+	          console.log('dom showed');
+	          localStorage.setItem(key,this.getDatetr());
+	          return ;
+	       };
+
+	       //永远不显示
+	       if(tip_info=='no'){
+	        return;
+	       }
+
+	       if(this.isToday(tip_info)){
+
+	       }else{
+	          localStorage.setItem(key,this.getDatetr());
+	          console.log('dom showed');
+	       };
+
+	       return this;
+	    },
+	    bindEvent:function(){
+	      var t=this;
+	      return;
+	      dom.find('.close').on('click',function(){
+	         localStorage.setItem(key,'no');
+	          console.log('dom hide');
+	      });
+	    },
+	    isToday:function(str){
+	      var prev_time=str.split('-'),t=this;
+	      if(str==t.getDatetr()){
+	        return true;
+	      }
+	      return false;
+	    },
+	    getDatetr:function(){
+	      var date=new Date();
+	      return  [date.getFullYear(),date.getMonth()+1,date.getDate()].join('-');
+	    }
+	  }).init();
+	})();
+</script>
+</html>

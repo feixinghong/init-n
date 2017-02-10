@@ -6,7 +6,6 @@
     <title>Css3 Images Fade & Slider</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="lib/style/base.css">
-    <script src="lib/js/slider.js"></script>
     <style type="text/css">
     body{
         overflow: hidden;
@@ -85,16 +84,14 @@
         </ul>
      </div>
    </div>
+   <div  class="" style="border: 1px solid black;color: red;">混</div>
    <footer class="fixed pos-bottom c-fff w-100 t-c">底部按钮</footer>
 </body>
 <script type="text/javascript">
    function loaded(){
         new Slider("#wrapper",{
             lazyLoad:false,
-            duration:0.5,
-            fallback:function(obj){
-                console.log(obj)
-            }
+            duration:0.5
         })
     }
    
