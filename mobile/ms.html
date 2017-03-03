@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="lib/style/base.css">
+	<link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+   <article>
+   	  <section>
+   	  	  <img src="ms/header.jpg" class="header">
+   	  	 <span class="button " id="go-see">查看活动详情</span>
+   	  	  <div class="step">
+   	  	    <img src="ms/step.png" class="">
+   	  	  	
+   	  	  </div>
+   	  	  <div class="desc">
+   	  	  		<img src="ms/first.png">
+   	  	  </div>
+   	  	  <div class="content">
+   	  	  	   <ul class="clearfix">
+   	  	  	   	  <li>
+   	  	  	   	  	<div>
+   	  	  	   	  		<div class="outer">
+   	  	  	   	  			<h3>法国</h3>
+   	  	  	   	  			<img  class='flag' src="ms/flag.jpg">
+   	  	  	   	  			<span>共<strong>2345</strong>票	</span>
+   	  	  	   	  		</div>
+   	  	  	   	  		<div class="vote">
+   	  	  	   	  			投一票
+   	  	  	   	  		</div>
+   	  	  	   	  	</div>
+   	  	  	   	  	<div class="inner-bo">
+   	  	  	   	  		<div class="outer">
+   	  	  	   	  			<h3>法国</h3>
+   	  	  	   	  			<img  class='flag' src="ms/flag.jpg">
+   	  	  	   	  			<span>共<strong>2345</strong>票	</span>
+   	  	  	   	  		</div>
+   	  	  	   	  		<div class="vote">
+   	  	  	   	  			投一票
+   	  	  	   	  		</div>
+   	  	  	   	  	</div>
+   	  	  	   	  	</li>
+   	  	  	   	  <li class="center">
+   	  	  	   	  		<div class="center-inner">
+   	  	  	   	  			<img src="ms/line.png" class="lr">
+   	  	  	   	  			<div class="center_img">
+   	  	  	   	  				<img src="ms/first_1.png" >
+   	  	  	   	  				<img src="ms/center_1.png" >
+   	  	  	   	  			</div>
+   	  	  	   	  		</div>
+   	  	  	   	  		
+   	  	  	   	  </li>
+   	  	  	   	  <li>
+   	  	  	   	   <div>
+   	  	  	   	   	   <div class="outer">
+   	  	  	   	   	   	<h3>法国</h3>
+   	  	  	   	   	   	<img  class='flag' src="ms/flag.jpg">
+   	  	  	   	   	   	<span>共<strong>2345</strong>票	</span>
+   	  	  	   	   	   </div>
+   	  	  	   	   	   <span class="vote">
+   	  	  	   	   	   	投一票
+   	  	  	   	   	   </span>
+   	  	  	   	   </div>
+   	  	  	   	   <div class="inner-bo">
+   	  	  	   	   	<div class="outer">
+   	  	  	   	   		<h3>法国</h3>
+   	  	  	   	   		<img  class='flag' src="ms/flag.jpg">
+   	  	  	   	   		<span>共<strong>2345</strong>票	</span>
+   	  	  	   	   	</div>
+   	  	  	   	   	<div class="vote">
+   	  	  	   	   		投一票
+   	  	  	   	   	</div>
+   	  	  	   	   </div>
+   	  	  	   	  	
+   	  	  	   	  </li>
+   	  	  	   </ul>
+   	  	  </div>
+   	  	  <div class="bottom">
+   	  	  	  <img src="ms/bot_1.png">
+   	  	  	  <span class="button">>>立即去看<<</span>
+   	  	  </div>
+   	  </section>
+   	  <div class="pop hide">
+   	  	 <div class="pop-inner">
+   	  	 	 <div class="t_a"><img src="ms/center_2.png" ></div>
+   	  	 	 <h1></h1>
+   	  	 	 <ul>
+   	  	 	 	<li>1.为你心目中的欧洲冠军投票，每个id可以投1票</li>
+   	  	 	 	<li>2.为你心目中的欧洲冠军投票，每个id可以投1票</li>
+   	  	 	 	<li>3.活动日期:7月1日-7月9日</li>
+   	  	 	 </ul>
+   	  	 	 <p>本活动解释权规免税易购所有	</p>
+   	  	 </div>
+   	  	 <span class="close"></span>
+   	  </div>
+   	  <div class="mask hide" id="mask"></div>
+   </article>
+</body>
+<script type="text/javascript">
+	window.onload=loaded;
+
+	function loaded(){
+		document.querySelector(".pop .close").addEventListener("touchstart",hide);
+		document.querySelector("#go-see").addEventListener("touchstart",show);
+		
+		document.querySelector("#mask").addEventListener("touchstart",hide);
+	}
+
+	function show(){
+					document.querySelector(".pop").style.display="block";
+					document.querySelector("#mask").style.display="block";
+	}
+
+	function hide(){
+					document.querySelector(".pop").style.display="none";
+					document.querySelector("#mask").style.display="none";
+	}
+</script>
+</html>

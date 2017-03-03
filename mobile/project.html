@@ -1,0 +1,359 @@
+<!doctype html>
+<html class="w-100">
+
+<head>
+    <meta charset="utf-8">
+    <title>Css3 Images Fade & Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=no">
+    <link rel="stylesheet" href="lib/style/base.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://mlsc.meilan.gov.cn/MLXCJK/newweb/js/lib/jquery.min.js"></script>
+    <script src="lib/js/slider.js"></script>
+    <script src="lib/js/subscribe.js"></script>
+    <style type="text/css">
+    body{
+        overflow: hidden;
+        height: 100%;
+    }
+
+    #wrapper{
+        height: 100%;
+    }
+    #main{
+        height: 521px;
+    }
+        .slider-panel>li{
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            overflow: hidden;
+        }
+        #main{
+            position: relative;
+        }
+
+        .slider-panel:after {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 50%;
+        }
+        .slider-tab li{
+            display: inline-block;
+            margin-right: 10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background: #fff;
+            border: 1px solid #000;
+        }
+        
+        .slider-tab{
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+        }
+        .slider-tab .active{
+            background: #888;
+        }
+        .slider-panel>li{
+            height: 100%;
+
+        }
+
+        .outer{
+            height: 2px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.33);
+
+        }
+        .inner{
+            height: 100%;
+            background: #4CAF50;
+            transition: width 0.5s;
+            border-radius: 5px;
+            width: 0px;
+        }
+        .progress{
+            bottom: 10px;
+            padding: 0px 20px;
+        }
+    </style>
+   <style type="text/css">
+       a:visited{
+         font-weight:bold;
+         font-size:20px;
+         color:yellow;
+       }
+       a:link:hover{color:red}
+       a:visited:hover{color:green}
+   </style>
+</head>
+
+<body onload="" class="w-100">
+  
+   <div id="main" style="height: 100%;">
+     <div id="wrapper" >
+        <ul class="slider-panel por h-100 swiper-slide-active bg">
+            <li class="hide">
+                <h1 class="c-fff big-title"><i class="icon"></i><span class="cirlce"></span>海南</h1>
+                <p class="sub-title t-c">2016年专题报告</p>
+                <div class="in_map">
+                <img src="img/map.png" alt=""></div>
+                <div class="fixed btn-wrap w-100">
+                  <input type="button" class="btn c-fff start" value="点击开启">
+                </div>
+                <h1 class="m-auto bounceInDown delay-2" style="width: 200px;">旅游大数据</h1>
+                 <img src="1.jpg" style="width: 50px;" class="m-l-15 delay-1 bounceInLeft">
+                 <h3 class="m-t-15 bounceInUp">点击开启</h3>
+            </li>
+            <li class="hide">
+              <h4 class="bounceInLeft salary t-c" >2016年，海南省实现旅游收入<span class="delay-8 bounceIn num">669</span>亿元，同比增长<span class="delay-8 bounceIn">16.71%</span></h4>
+              <div class="earth-wrap"> 
+                    <img src="img/map.png" alt="" class="earth">
+              </div>
+              <h4  class="bounceInRight tourist t-c">预计全省接待游客<span class="delay-8 bounceIn num">6023.59</span>亿元，同比增长<span class="delay-8 bounceIn">16.71%</span></h4>
+              
+              <div class="person t-c">
+              <img src="img/people.png" alt=""></div>
+            </li>
+             <li class="hide">
+                 <i class="icon1"></i>
+                 <ul class="bar-wrap t-c pos-r">
+                    <li class="bar-yellow bar">
+                       <div class="bar-inner">
+                           <span class="pos-a bar-data">25</span>
+                           <span class="bar-title yellow">1A</span>
+                          </div>
+                        </li>
+                    <li class="bar bar-red">
+                    <div class="bar-inner">
+                                               <span class="pos-a bar-data">17</span>
+                                               <span class="bar-title red">2A</span>
+                                              </div>
+                                            </li>
+                        </li>
+                    <li class="bar bar-blue">
+                    <div class="bar-inner">
+                                               <span class="pos-a bar-data">28</span>
+                                               <span class="bar-title blue">3A</span>
+                                              </div>
+                                            </li>
+                        </li>
+                    <li class="bar bar-light-blue">
+                    <div class="bar-inner">
+                                               <span class="pos-a bar-data">2</span>
+                                               <span class="bar-title light-blue">4A</span>
+                                              </div>
+                                            </li></li>
+                    <li class="bar bar-deep-red">
+                    <div class="bar-inner">
+                                               <span class="pos-a bar-data">30</span>
+                                               <span class="bar-title dark-red">5A</span>
+                                              </div>
+                                            </li></li>
+                 </ul>
+                 <section class="chart-tour">
+                     <div class="chart-tour-wrap">
+
+                     <img src="img/chart_tour.png" alt=""></div>
+                 </section>
+            </li>
+            <li class="hide">
+                  <div class="w-h-100 resource">
+                      <h1 class="resource-title c-fff">全省旅游资源结构</h1>
+                      <section class="resource-map-wrap">
+                         <div class="resource-map bg-format"></div>
+                         <span class="tour-desc area">景区总数<strong>42</strong>个</span>
+                         <span class="tour-desc hotel">酒店总数<strong>423</strong>家</span>
+                         <span class="tour-desc travel-agency">旅行社<strong>423</strong>家</span>
+                         <span class="tour-desc restaurant">餐厅总数<strong>422</strong>家</span>
+                         <span class="tour-desc tour-shop">旅行商店<strong>89</strong>家</span>
+                         <span class="tour-desc leisure">休闲娱乐<strong>532</strong>家</span>
+                         <span class="tour-desc work-people">从业人员总数<strong>123333</strong>人</span>
+                      </section>
+                  </div>
+            </li>
+            <li class="hide">
+                <i class="icon1"></i>
+                <div  class="earth t-c"><img src="img/map1.png" alt=""></div>
+                <div class="line"></div>
+                <ul class="gallery">
+                  <li class="clearfix">
+                        <img src="img/gallery_01.png" alt="" >
+                          <div class="gallery-desc">
+                            <p class="main-desc">全省旅游人数 <strong>14582</strong> 人</p>
+                          </div>
+                        </img>
+                  </li>
+                  <li class="clearfix">
+                        <img src="img/gallery_02.png" alt="" >
+                          <div class="gallery-desc">
+                            <p class="main-desc">全省咨询中心共<strong>32</strong> 个</p>
+                            <span class="sub-desc">共接待人次42415人</span>
+                          </div>
+                        </img>
+                  </li>
+                  <li class="clearfix">
+                        <img src="img/gallery_03.png" alt="" >
+                          <div class="gallery-desc">
+                            <p class="main-desc">全省从业实际共 <strong>4321</strong> 人</p>
+                            <span class="sub-desc">共接待人次42415人</span>
+                          </div>
+                        </img>
+                  </li>
+                </ul>
+            </li>
+            <li class="hide">
+               <h1 class="resource-title c-fff restaurant-title">全省餐厅排名</h1>
+                 <div class="resource-section">
+                    <ul class="resource-section-l">
+                      <li><span>1</span></li>
+                      <li><span>2</span></li>
+                      <li><span>3</span></li>
+                      <li><span>4</span></li>
+                      <li><span>5</span></li>
+                    </ul>
+                    <ul class="resource-section-r">
+                      <li>
+                        <span>海南琼菜坊餐厅</span>
+                        <i class="icon-rect " style="width: 1.6rem;"></i>
+                      </li>
+                      <li>
+                        <span>海底捞火锅</span>
+                        <i class="icon-rect  " style="width: 1.3rem;"></i>
+                      </li>
+                      <li>
+                        <span>九毛九山西面馆</span>
+                        <i class="icon-rect " style="width: 1.1rem;"></i>
+                      </li>
+                      <li>
+                        <span>顺拾蒸海鲜蒸汽料理</span>
+                        <i class="icon-rect " style="width: 0.86rem;"></i>
+                      </li>
+                      <li>
+                        <span>太二酸菜鱼</span>
+                        <i class="icon-rect " style="width: 0.6rem;"></i>
+                      </li>
+                    </ul>
+                 </div>
+                 <div class="favor">
+                   <i class=""></i>
+                   <span>最喜欢的美食：<strong>海南文昌椰子鸡</strong></span>
+                 </div>
+            </li>
+            <li class="hide">
+                <section class="bg_2">
+                  <div class="bg_2_inner">
+                    <div class="reside">
+                    <span>
+                      住
+                    </span>
+                    <span>
+                    ZHU
+                    </span>
+                    </div>
+                  </div>
+                </section>
+            </li>
+
+            <li>
+                  <div class="reside-content-a title-wrap t-c">
+                      
+                      <h1 class="resource-title c-fff">全省旅游资源结构</h1> <span class="m-l-10">酒店总数为4726家</span>
+                  </div>
+
+                  <div class="chart-item-title-wrap">
+
+                      <div class="chart-reside">
+                          <img src="img/chart_1.jpg" alt="">
+                      </div>
+                      <span class="chart-item-title start-1">一星级21.01%</span>
+                      <span class="chart-item-title star-2">二星级32.77%</span>
+                      <span class="chart-item-title start-3">三星级31.93%</span>
+                      <span class="chart-item-title start-4">四星级7.56%</span>
+                      <span class="chart-item-title star-5">五星级7.56%</span>
+                  </div>
+                  <div class="a" style="width: 200px;">
+
+                  <img style="max-width: 100%" src="https://img01.sogoucdn.com/app/a/100520115/a65771d2453fd930584a62a295fc2c04" alt=""></div>
+            </li>
+        </ul>
+        <ul class="slider-tab">
+            <li data-index="0">
+                <a></a>
+            </li>
+              <li data-index="1">
+                <a ></a>
+            </li>
+              <li data-index="2">
+                <a ></a>
+            </li>
+             <li data-index="4">
+                <a ></a>
+            </li>
+        </ul>
+     </div>
+   </div>
+   <section id="progress" class="progress fixed w-100">
+       <div class="outer" id="outer">
+            <div class="inner" id="inner"></div>
+        </div>
+   </section>
+</body>
+<script type="text/javascript">
+    function set_width(curr,total,dom){
+            if(curr>total){
+                curr=total;
+            }
+
+            var percent=(curr/total)*100+"%";
+
+            dom.style.width=percent;
+        };
+
+   function loaded(){
+       var new_slider= new Slider("#wrapper",{
+            lazyLoad:false,
+            duration:0.5,
+            direction:'v',
+            auto_play:false,
+            onEnter:function(curr,total){
+                console.log('enter');
+                curr=curr+1;
+                
+            },
+            onLeave:function(){
+            }
+        });
+
+       
+       //执行完
+       new_slider.listen("onEnter",function(curr,total){
+         set_width(curr,total,document.querySelector('#inner'));
+       });
+
+       var active={
+            turnon:function(){
+                this.classList.remove('hide');
+            },
+            turnoff:function(){
+                 this.classList.add('hide');
+            }
+       }
+
+       new_slider.listen("onEnter",function(curr,total){
+          active.turnon.call(this);
+       });
+
+         new_slider.listen("onLeave",function(curr,total){
+          active.turnoff.call(this);
+       });
+    };
+
+    window.onload=loaded;
+   
+</script>
+</html>

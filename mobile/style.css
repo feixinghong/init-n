@@ -1,0 +1,495 @@
+@media (min-device-width : 360px){
+html{font-size: 112.5px;}
+}
+
+/* iphone 6 */
+@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+html{font-size: 117.1875px;}
+}
+/* iphone6 plus */
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+ html{font-size: 129.375px;}
+ }
+
+body{
+	font-size: 0.12rem;
+}
+.bg{
+	background: url(./img/bg.jpg) no-repeat;
+	background-size: 100% 100%;
+
+}
+
+.big-title{
+   margin-top: 0.97rem;	
+   margin-left: 0.34rem;
+}
+
+.big-title .icon{
+	width: 2.06rem;
+	height: 0.61rem;
+	background: url(./img/big_data.png) no-repeat;
+	background-size: 100% 100%;
+}
+i{
+	display: inline-block;
+}
+
+.sub-title{
+	color:#b3e0fc;
+}
+
+.cirlce{
+	width: 5px;
+	height: 5px;
+	border-radius: 4px;
+	background:#fff;
+	display: inline-block;
+	    margin: 0px 9px;
+	    vertical-align: middle;
+}
+
+.icon{
+	vertical-align: middle;
+}
+
+.in_map{
+	margin-top: 0.336rem;
+	text-align: center;
+}
+
+.in_map img{
+	width:1.65rem;
+	height: 1.94rem;
+}
+
+.btn{
+	display: inline-block;
+	height: 0.356rem;
+	line-height: 0.356rem;
+	background: #3fe2e8;
+	background: url(img/btn1.png) no-repeat;
+	background-size: 100% 100%;
+	white-space: pre;
+	width: 1.32rem;
+	font-size: 0.21rem;
+}
+.btn-wrap{
+	bottom: 0.89rem;
+	text-align: center;
+}
+
+.earth-wrap{
+	text-align: center;
+	width: 2.52rem;
+	margin:-10px auto 0px;
+	background: url(img/map1_back.png) no-repeat;
+	background-size: cover;
+	height: 1.77rem;
+}
+.earth-wrap .earth{
+	width: 100%;
+	height: 100%;
+}
+
+.salary,.tourist{
+	font-size: 0.147rem;
+	color: #fff;
+	margin:0px 0.168rem;
+}
+.tourist{
+	margin-bottom: 0.126rem;
+}
+.salary{
+	margin-top: 0.63rem;
+}
+
+.num{
+	font-size: 0.252rem;
+	color: #ffe897
+}
+
+.person img{
+	width: 2.35rem;
+}
+
+.bar-wrap{
+	display: -webkit-box;
+	display: box;
+	margin:0px 0.21rem;
+}
+
+
+.bar-wrap li{
+	-webkit-box-flex:1;
+	   box-flex:1;
+}
+
+.bar-wrap .bar .bar-inner{
+	width: 0.294rem;
+	    margin: 0px auto;
+	height: 1.49rem;
+	box-sizing: content-box;
+	position: relative;
+	background: url(img/bar_r.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: left bottom;
+	background-origin: content-box;
+	padding-bottom: 20px;
+}
+
+.bar-wrap .bar-blue .bar-inner{
+	background-image: url(img/bar_b.png);
+}
+
+.bar-wrap .bar-yellow .bar-inner{
+	background-image: url(img/bar_y.png);
+}
+
+.bar-wrap .bar-blue .bar-inner{
+	background-image: url(img/bar_blue.png);
+}
+
+.bar-wrap .bar-light-blue .bar-inner{
+	background-image: url(img/bar_b.png);
+}
+
+.bar-wrap .bar-deep-red .bar-inner{
+	background-image: url(img/bar_dr.png);
+}
+.bar-wrap .bar-data{
+	position: absolute;
+	top: 10px;
+	left: 8px;
+	font-weight: bold;
+	color: #fff
+}
+.bar-wrap .bar-title{
+	position: absolute;
+	bottom: 0px;
+	left: 9px;
+}
+
+.bar-red .bar-data{
+	top: 57px;
+}
+
+.bar-yellow .bar-data{
+	top: 10px;
+}
+
+.bar-blue .bar-data{
+	top: 5px;
+}
+
+.bar-light-blue .bar-data{
+	top: 28px;
+	left:11px;
+}
+
+.bar-deep-red .bar-data{
+	top: -2px;
+}
+.yellow{
+	color: yellow;
+}
+.blue{
+  color: #5441ff
+}
+
+.red{
+  color:#ff4e41;
+}
+
+.light-blue{
+	color:#62fffe;
+}
+
+.dark-red{
+	color:#b81b00;
+}
+
+.chart-tour-wrap{
+	width: 2.60rem;
+	height: 1.77rem;
+	text-align: center;
+	margin:10px auto;
+}
+.chart-tour-wrap img{
+	width: 100%;
+}
+
+.icon1{
+	width: 0.252rem;
+	height: 0.252rem;
+	margin: 0.21rem 0.084rem ;
+	background: url(img/side-control.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.chart-tour{
+	margin-top: 0.21rem;
+}
+
+
+
+.resource-title{
+	background-image: url(img/header_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	font-size: 0.218rem;
+	margin-left: 0.029rem;
+	line-height: 0.25rem;
+	margin-top: 0.53rem;
+	display: inline-block;
+	    padding: 3px;
+}
+
+.resource-map-wrap{
+	position: relative;
+	height: 2.94rem;
+}
+
+.bg-format{
+	background-origin: content-box;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.resource-map{
+	width: 2.54rem;
+	height: 2.46rem;
+	margin: 0.53rem auto 0px;
+	font-size: 0.13rem;
+	background-image: url(img/map2.png);
+	padding-top: 0.2rem;
+
+}
+.tour-desc{
+	position: absolute;
+	color:#fff;
+}
+
+.resource-map-wrap .area{
+	top: 0.45rem;
+	left: 0.4rem;
+}
+.resource-map-wrap .hotel{
+	top: 0.09rem;
+	left: 1.1rem;
+}
+
+.resource-map-wrap .travel-agency{
+	top: 0.0rem;
+	    right: 0.5rem;
+}
+
+.resource-map-wrap .restaurant{
+	bottom: 0.7rem;
+	    left: 0.3rem;
+}
+.resource-map-wrap .tour-shop{
+	    right: 0.9rem;
+	        bottom: 0.6rem;
+}
+.resource-map-wrap .leisure{
+	right: 0.4rem;
+	bottom: 1rem;
+}
+.resource-map-wrap .work-people{
+	left: 0.8rem;
+}
+
+.gallery img{
+	width: 0.84rem;
+	float: left;
+}
+
+.gallery{
+	margin-left: 0.18rem;
+}
+.gallery .gallery-desc{
+	color: #fff;
+	line-height: 0.13rem;
+	margin-left: 0.126rem;
+	float: left;
+	margin-top: 0.09rem;
+}
+
+.gallery .gallery-desc strong{
+	color:#bd2c00;
+}
+
+.gallery .main-desc{
+	line-height: 0.3rem;
+	font-size: 0.15rem;
+}
+
+.earth img{
+	width: 1.93rem;
+
+
+}
+
+@keyframes rotate-y{
+	0%{
+		transform: rotate3d(0,1,0,00deg);
+	}
+	
+	0%{
+		transform: rotate3d(0,1,0,180deg);
+	}
+	100%{
+		transform: rotate3d(0,1,0,360deg);
+	}
+}
+
+.rotate-y{
+	-webkit-animation:rotate-y 1s;
+	animate:rotate-y 1s;
+	animation-fill-mode: both;
+	animation-iteration-count:infinite;
+}
+
+.resource-section{
+	margin-top: 0.33rem;
+	display: -webkit-box;
+	display: box;
+}
+
+
+.resource-section .resource-section-l{
+	width:0.42rem;
+
+	margin-left: 0.31rem;
+}
+.resource-section .resource-section-l li{
+	height: 0.42rem;
+	margin-bottom: 0.12rem;
+}
+
+.resource-section .resource-section-l li span{
+	color: #fff;
+	font-size: 0.2rem;
+	width: 0.36rem;
+	height: 0.36rem;
+	text-align: center;
+	line-height: 0.36rem;
+	display: inline-block;
+	background-image: url(img/li_title.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.resource-section .resource-section-r{
+	width: 2.10rem;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	background-image:url(img/rect_bg.png);
+	background-repeat: repeat;
+	color:#fff;
+
+}
+.resource-section .resource-section-r li{
+	margin-left: 0.075rem;
+}
+.resource-section .resource-section-r .icon-rect{
+	display: block;
+	height: 0.10rem;
+	border: 1px  solid #fff;
+	background-image: url(img/rect.png);
+	background-size: 100% 100%;
+	background-repeat:repeat-x;
+	margin-bottom: 0.13rem;
+}
+
+.resource-section .resource-section-r span{
+	display: block;
+	line-height: 0.3rem;
+	font-size: 0.15rem;
+}
+
+.favor i{
+	display: inline-block;
+	background-image: url(img/eat.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 0.374rem;
+	height: 0.374rem;
+	vertical-align: middle;
+}
+
+.favor {
+	margin-top: 0.61rem;
+	text-align: center;
+}
+.favor>span{
+	color: #fff;
+	margin-left: 4px;
+	line-height: 0.20rem;
+}
+
+.restaurant-title{
+	    margin-left: 0.31rem;
+}
+
+.bg_2 {
+	height: 100%;
+	width:100%;
+	background-image: url(img/bg2.jpg);
+	background-size:100% 100%; 
+}
+
+.bg_2 .bg_2_inner{
+	height: 100%;
+	width: 100%;
+	background-image: url(img/bg2_top.jpg);
+	background-size:100% 100%; 
+}
+
+.reside{
+	padding-top: 0.81rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.20rem;
+
+}
+
+.reside >span{
+	display: block;
+}
+
+.reside-content-a {
+	margin-top: 0.94rem;
+	color: #fff;
+}
+
+.reside-content-a .resource-title {
+	font-size: 0.15rem;	
+}
+
+.reside-content-a  span{
+	    font-size: 0.15rem;
+}
+
+ .chart-reside img{
+	width: 100%;
+}
+
+ .chart-reside{
+	width: 2.68rem;
+	height: 1.56rem;
+	margin:0.69rem auto;
+}
+
+.chart-item-title-wrap{
+	position: relative;
+}
+.chart-item-title {
+	position: absolute;
+	color:#e9f8fa;
+	display: none;
+}
+.chart-item-title.start-1{
+
+}
