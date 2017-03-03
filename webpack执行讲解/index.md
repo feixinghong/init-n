@@ -17,8 +17,7 @@ window.a=require('./test.js')
 
 
 则现在require到的是一个空的对象。因为：
-[img]http://dl2.iteye.com/upload/attachment/0123/4685/4e362494-fe14-37dc-9758-47e6408dbbb9.png[/img]
-![image](./1.jpg)
+![image](./2.png)
 ### 2
 webpack 执行编译后放到浏览器里面的执行流程:
 
