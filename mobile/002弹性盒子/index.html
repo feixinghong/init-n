@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>弹性盒子</title>
+	<style type="text/css">
+		.father{
+			
+			 display:box;
+			 display:-webkit-box;
+			 width: 50%;
+		}
+		.son1{
+		box-flex:1;
+		-webkit-box-flex:1;
+		height: 100px;
+		}
+		.son2{
+		box-flex:1;
+		-webkit-box-flex:1;
+		height: 200px;
+		}
+		.son3{
+		box-flex:1;
+		
+		-webkit-box-flex:1;
+		height: 300px;
+		}
+		
+		.father>*{
+			outline: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+   <div class="father">
+   	  <div class="son1"></div>
+   	  <div class="son2"></div>
+   	  <div class="son3"></div>
+   </div>
+   <div class="father">
+   	  <div class="son1">http://dev.inboyu.com/qy-con</div>
+   	  <div class="son2"></div>
+   	  <div class="son3"></div>
+   </div>
+</body>
+</html>

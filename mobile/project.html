@@ -23,10 +23,7 @@
         height: 521px;
     }
         .slider-panel>li{
-            width: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px;
+           
             height: 100%;
             overflow: hidden;
         }
@@ -95,9 +92,9 @@
 <body onload="" class="w-100">
   
    <div id="main" style="height: 100%;">
-     <div id="wrapper" >
-        <ul class="slider-panel por h-100 swiper-slide-active bg">
-            <li class="hide">
+     <div id="wrapper" class="bg">
+        <ul class="slider-panel por h-100  full-page">
+            <li class=" item hide page01" >
                 <h1 class="c-fff big-title"><i class="icon"></i><span class="cirlce"></span>海南</h1>
                 <p class="sub-title t-c">2016年专题报告</p>
                 <div class="in_map">
@@ -109,7 +106,7 @@
                  <img src="1.jpg" style="width: 50px;" class="m-l-15 delay-1 bounceInLeft">
                  <h3 class="m-t-15 bounceInUp">点击开启</h3>
             </li>
-            <li class="hide">
+            <li class=" item hide page02" >
               <h4 class="bounceInLeft salary t-c" >2016年，海南省实现旅游收入<span class="delay-8 bounceIn num">669</span>亿元，同比增长<span class="delay-8 bounceIn">16.71%</span></h4>
               <div class="earth-wrap"> 
                     <img src="img/map.png" alt="" class="earth">
@@ -119,41 +116,39 @@
               <div class="person t-c">
               <img src="img/people.png" alt=""></div>
             </li>
-             <li class="hide">
+             <li class=" item hide page03" >
                  <i class="icon1"></i>
                  <ul class="bar-wrap t-c pos-r">
                     <li class="bar-yellow bar">
-                       <div class="bar-inner">
-                           <span class="pos-a bar-data">25</span>
-                           <span class="bar-title yellow">1A</span>
-                          </div>
-                        </li>
+                     <span class="pos-a bar-data" style="height:100%">
+                               	  <em>30</em>
+                               </span>
+                               <label class="bar-title red">1A</label>
+                    </li>
                     <li class="bar bar-red">
-                    <div class="bar-inner">
-                                               <span class="pos-a bar-data">17</span>
-                                               <span class="bar-title red">2A</span>
-                                              </div>
-                                            </li>
-                        </li>
+                               <span class="pos-a bar-data" style="height:80%">
+                               	  <em>30</em>
+                               </span>
+                               <label class="bar-title red">2A</label>
+                      </li>
                     <li class="bar bar-blue">
-                    <div class="bar-inner">
-                                               <span class="pos-a bar-data">28</span>
-                                               <span class="bar-title blue">3A</span>
-                                              </div>
-                                            </li>
+                   <span class="pos-a bar-data" style="height:70%">
+                               	  <em>30</em>
+                               </span>
+                               <label class="bar-title red">3A</label>
                         </li>
                     <li class="bar bar-light-blue">
-                    <div class="bar-inner">
-                                               <span class="pos-a bar-data">2</span>
-                                               <span class="bar-title light-blue">4A</span>
-                                              </div>
-                                            </li></li>
+                   <span class="pos-a bar-data" style="height:60%">
+                               	  <em>30</em>
+                               </span>
+                               <label class="bar-title red">4A</label>
+                                            </li>
                     <li class="bar bar-deep-red">
-                    <div class="bar-inner">
-                                               <span class="pos-a bar-data">30</span>
-                                               <span class="bar-title dark-red">5A</span>
-                                              </div>
-                                            </li></li>
+                  <span class="pos-a bar-data" style="height:50%">
+                               	  <em>30</em>
+                               </span>
+                               <label class="bar-title red">5A</label>
+                                            </li>
                  </ul>
                  <section class="chart-tour">
                      <div class="chart-tour-wrap">
@@ -161,79 +156,107 @@
                      <img src="img/chart_tour.png" alt=""></div>
                  </section>
             </li>
-            <li class="hide">
+            <li class=" item hide page04" >
                   <div class="w-h-100 resource">
                       <h1 class="resource-title c-fff">全省旅游资源结构</h1>
                       <section class="resource-map-wrap">
                          <div class="resource-map bg-format"></div>
-                         <span class="tour-desc area">景区总数<strong>42</strong>个</span>
-                         <span class="tour-desc hotel">酒店总数<strong>423</strong>家</span>
-                         <span class="tour-desc travel-agency">旅行社<strong>423</strong>家</span>
-                         <span class="tour-desc restaurant">餐厅总数<strong>422</strong>家</span>
-                         <span class="tour-desc tour-shop">旅行商店<strong>89</strong>家</span>
-                         <span class="tour-desc leisure">休闲娱乐<strong>532</strong>家</span>
-                         <span class="tour-desc work-people">从业人员总数<strong>123333</strong>人</span>
+                         <div class="tour-desc area">景区总数<strong>42</strong>个
+                         			<i class="icon1"></i>
+                         	</div>
+                         <div class="tour-desc hotel">酒店总数<strong>423</strong>家
+                         <i class="icon1"></i>
+                         </div>
+                         <div class="tour-desc travel-agency">旅行社<strong>423</strong>家
+                         <i class="icon1"></i>
+                         </div>
+                         <div class="tour-desc restaurant"><i class="icon2"></i>
+                         餐厅总数<strong>422</strong>家
+
+                         		</div>
+                         <div class="tour-desc tour-shop"><i class="icon2"></i>
+                         旅行商店<strong>89</strong>家
+                         			
+                         		</div>
+                         <div class="tour-desc leisure"><i
+                          class="icon2"></i>休闲娱乐<strong>532</strong>家
+                         			
+                         		</div>
+                         <div class="tour-desc work-people">
+                         <i class="icon2"></i>从业人员总数<strong>123333</strong>人
+                         			
+                         		</div>
                       </section>
                   </div>
             </li>
-            <li class="hide">
+            <li class=" item hide page05" >
                 <i class="icon1"></i>
                 <div  class="earth t-c"><img src="img/map1.png" alt=""></div>
                 <div class="line"></div>
-                <ul class="gallery">
-                  <li class="clearfix">
-                        <img src="img/gallery_01.png" alt="" >
-                          <div class="gallery-desc">
-                            <p class="main-desc">全省旅游人数 <strong>14582</strong> 人</p>
-                          </div>
-                        </img>
-                  </li>
-                  <li class="clearfix">
-                        <img src="img/gallery_02.png" alt="" >
-                          <div class="gallery-desc">
-                            <p class="main-desc">全省咨询中心共<strong>32</strong> 个</p>
-                            <span class="sub-desc">共接待人次42415人</span>
-                          </div>
-                        </img>
-                  </li>
-                  <li class="clearfix">
-                        <img src="img/gallery_03.png" alt="" >
-                          <div class="gallery-desc">
-                            <p class="main-desc">全省从业实际共 <strong>4321</strong> 人</p>
-                            <span class="sub-desc">共接待人次42415人</span>
-                          </div>
-                        </img>
-                  </li>
-                </ul>
+               <div class="a_list">
+               		<ul class="gallery">
+               		  <li class="clearfix">
+               		        <img src="img/gallery_01.png" alt="" >
+               		          <div class="gallery-desc">
+               		            <p class="main-desc">全省旅游人数 <strong>14582</strong> 人</p>
+               		          </div>
+               		        </img>
+               		  </li>
+               		  <li class="clearfix">
+               		        <img src="img/gallery_02.png" alt="" >
+               		          <div class="gallery-desc">
+               		            <p class="main-desc">全省咨询中心共<strong>32</strong> 个</p>
+               		            <span class="sub-desc">共接待人次42415人</span>
+               		          </div>
+               		        </img>
+               		  </li>
+               		  <li class="clearfix">
+               		        <img src="img/gallery_03.png" alt="" >
+               		          <div class="gallery-desc">
+               		            <p class="main-desc">全省从业实际共 <strong>4321</strong> 人</p>
+               		            <span class="sub-desc">共接待人次42415人</span>
+               		          </div>
+               		        </img>
+               		  </li>
+               		</ul>
+               </div>
             </li>
-            <li class="hide">
+            <li class=" item hide page06" >
                <h1 class="resource-title c-fff restaurant-title">全省餐厅排名</h1>
                  <div class="resource-section">
-                    <ul class="resource-section-l">
-                      <li><span>1</span></li>
-                      <li><span>2</span></li>
-                      <li><span>3</span></li>
-                      <li><span>4</span></li>
-                      <li><span>5</span></li>
-                    </ul>
                     <ul class="resource-section-r">
                       <li>
+                      	<label>
+                      		<img src="img/8_03.png">
+                      	</label>
                         <span>海南琼菜坊餐厅</span>
                         <i class="icon-rect " style="width: 1.6rem;"></i>
                       </li>
                       <li>
+	                      <label>
+	                      	<img src="img/8_07.png">
+	                      </label>
                         <span>海底捞火锅</span>
                         <i class="icon-rect  " style="width: 1.3rem;"></i>
                       </li>
                       <li>
+                      	<label>
+                      		<img src="img/8_10.png">
+                      	</label>
                         <span>九毛九山西面馆</span>
                         <i class="icon-rect " style="width: 1.1rem;"></i>
                       </li>
                       <li>
+                      	<label>
+                      		<img src="img/8_12.png">
+                      	</label>
                         <span>顺拾蒸海鲜蒸汽料理</span>
                         <i class="icon-rect " style="width: 0.86rem;"></i>
                       </li>
                       <li>
+                      	<label>
+                      		<img src="img/8_15.png">
+                      	</label>
                         <span>太二酸菜鱼</span>
                         <i class="icon-rect " style="width: 0.6rem;"></i>
                       </li>
@@ -244,7 +267,7 @@
                    <span>最喜欢的美食：<strong>海南文昌椰子鸡</strong></span>
                  </div>
             </li>
-            <li class="hide">
+            <li class=" item hide page07" >
                 <section class="bg_2">
                   <div class="bg_2_inner">
                     <div class="reside">
@@ -259,16 +282,16 @@
                 </section>
             </li>
 
-            <li>
+            <li class="item hide page08">
                   <div class="reside-content-a title-wrap t-c">
                       
-                      <h1 class="resource-title c-fff">全省旅游资源结构</h1> <span class="m-l-10">酒店总数为4726家</span>
+                      <i class="resource-title c-fff"></i> <span>酒店总数为4726家</span>
                   </div>
 
                   <div class="chart-item-title-wrap">
 
                       <div class="chart-reside">
-                          <img src="img/chart_1.jpg" alt="">
+                          <img src="img/zhu_02.png" alt="">
                       </div>
                       <span class="chart-item-title start-1">一星级21.01%</span>
                       <span class="chart-item-title star-2">二星级32.77%</span>
@@ -278,7 +301,147 @@
                   </div>
                   <div class="a" style="width: 200px;">
 
-                  <img style="max-width: 100%" src="https://img01.sogoucdn.com/app/a/100520115/a65771d2453fd930584a62a295fc2c04" alt=""></div>
+                  <i class="step"></i>
+            </li>
+            <li class="item page09 hide">
+            	<div class="title-wrap">
+            		<i></i>
+            	</div>
+            	<div class="hotel-desc">
+            		 <div class="ho-top">
+            		 	<i></i>
+            		 	<div class="desc-inner">
+            		 		<p>全省酒店接待人次达</p>
+            		 		<p><strong>4312</strong>万人</p>
+            		 	</div>
+            		 </div>
+            		 <div class="ho-center"><img src="img/hotel_line.png"></div>
+            		 <div class="ho-bottom">
+            		 	<div class="desc-inner">
+            		 			<p>旅游最喜欢下榻酒店</p>
+            		 			<p><strong>海南大酒店</strong></p>
+            		 	</div>
+            		 	<i></i>
+            		 </div>
+            	</div>
+            </li>
+            <li class="item page10 hide">
+            	<i class="step"></i>
+            </li>
+            <li class="item page11 hide">
+            	<div class="title-wrap">
+            		<i></i>
+            	</div>
+            	<div class="tour-people">
+            		  <div>
+            		  	<span>来海南游客<strong>2316</strong>万</span>
+            		  	<span class="s-title">航空数据</span>
+            		  </div>
+            		  <div class="xing-icon"><img src="img/xing_07.png"></div>
+            		  <div>
+            		  	<span>团队游客<strong>500万</strong></span>
+            		  	<span class="s-title">行程单数据</span>
+            		  </div>
+            	</div>
+            	<div class="title-wrap-bottom">
+            		<i></i>
+            	</div>
+            	<div class="tour-map">
+            		
+            		 <div class="">
+            		 	<img src="img/xing_11.png">
+            		 </div>
+            	</div>
+            </li>
+            <li class="item page12">
+            </li>
+            <li class="item page13">
+            	<i class="step"></i>
+            	<span class="area-title">[景点景区游客总数及排名]</span>
+            	<div class="wrap">
+            		<ul>
+            			<li>
+            				<label>
+            					<img src="img/you_01.png">
+            				</label>
+            				<div>
+            					<p>霍日拉瀑布<strong>109</strong>万</p>
+            					<div class="rate-bg">
+            						<span class="rate" style="width: 30%"></span>
+            					</div>
+            				</div>
+            			</li>
+            			<li>
+            				<label>
+            					<img src="img/you_02.png">
+            				</label>
+            				<div>
+            					<p>霍日拉瀑布<strong>109</strong>万</p>
+            					<div class="rate-bg">
+            						<span class="rate" style="width: 30%"></span>
+            					</div>
+            				</div>
+            			</li>
+            			<li>
+            				<label>
+            					<img src="img/you_03.png">
+            				</label>
+            				<div>
+            					<p>霍日拉瀑布<strong>109</strong>万</p>
+            					<div class="rate-bg">
+            						<span class="rate" style="width: 30%"></span>
+            					</div>
+            				</div>
+            			</li>
+            			<li>
+            				<label>
+            					<img src="img/you_04.png">
+            				</label>
+            				<div>
+            					<p>霍日拉瀑布<strong>109</strong>万</p>
+            					<div class="rate-bg">
+            						<span class="rate" style="width: 30%"></span>
+            					</div>
+            				</div>
+            			</li>
+            			<li>
+            				<label>
+            					<img src="img/you_05.png">
+            				</label>
+            				<div>
+            					<p>五公祠<strong>109</strong>万</p>
+            					<div class="rate-bg">
+            						<span class="rate" style="width: 30%"></span>
+            					</div>
+            				</div>
+            			</li>
+            		</ul>
+            	</div>
+            </li>
+            <li class="item page14">
+            	
+            </li>
+            <li class="item page15">
+            	<span class="area-title">[购物中心主要分布]</span>
+            	<div class="l-b">
+            		<div class="inner">
+            			<span class="t1 p1">海口</span>
+            			<span class="t1 p2">三亚</span>
+            			<span class="t2 p3">其它区域</span>
+            			<span class="t2 p4">主要集中</span>
+            		</div>
+            	</div>
+            	<p class="t3">指点购物中心的总数<strong>10</strong>个</p>
+            </li>
+            <li class="item page16">
+            	
+            </li>
+            <li class="item page17">
+            	<span class="area-title">[全省公厕资源结构]</span>
+            	<p class="t1">全省公厕总数为</p>
+            	<div class="t2">
+            		<p class="t3"><strong>4726</strong>间</p>
+            	</div>
             </li>
         </ul>
         <ul class="slider-tab">
@@ -301,6 +464,7 @@
        <div class="outer" id="outer">
             <div class="inner" id="inner"></div>
         </div>
+      
    </section>
 </body>
 <script type="text/javascript">
@@ -315,6 +479,38 @@
         };
 
    function loaded(){
+    var active={
+         turnon:function(){
+             // this.classList.remove('');
+         },
+         turnoff:function(){
+              // this.classList.add('hide');
+         }
+    }
+
+    var imgs={
+      0:{
+        hasLoaded:false,
+        urls:['https://www.lgstatic.com/thumbnail_120x120/image1/M00/00/1B/CgYXBlTUWFmAJ3A2AABN1-c8pUw531.png']
+      },
+      1:{
+        hasLoaded:false,
+        urls:['http://pic55.nipic.com/file/20141208/19462408_171130083000_2.jpg','https://www.lgstatic.com/thumbnail_120x120/image1/M00/00/1B/CgYXBlTUWFmAJ3A2AABN1-c8pUw531.png']
+      },
+      2:{
+        hasLoaded:false,
+        urls:['http://tupian.enterdesk.com/2012/0606/gha/10/11285966_1334673509285.jpg','https://www.lgstatic.com/thumbnail_120x120/image1/M00/00/1B/CgYXBlTUWFmAJ3A2AABN1-c8pUw531.png']
+      },
+      3:{
+        hasLoaded:false,
+        urls:['http://pic41.nipic.com/20140518/18521768_133448822000_2.jpg','https://www.lgstatic.com/thumbnail_120x120/image1/M00/00/1B/CgYXBlTUWFmAJ3A2AABN1-c8pUw531.png']
+      },
+      4:{
+        hasLoaded:false,
+        urls:['http://t1.niutuku.com/960/24/24-617747.jpg','https://www.lgstatic.com/thumbnail_120x120/image1/M00/00/1B/CgYXBlTUWFmAJ3A2AABN1-c8pUw531.png']
+      }
+    }
+
        var new_slider= new Slider("#wrapper",{
             lazyLoad:false,
             duration:0.5,
@@ -322,35 +518,46 @@
             auto_play:false,
             onEnter:function(curr,total){
                 console.log('enter');
-                curr=curr+1;
                 
+                active.turnon.call(this);
+                // 设置进度值
+                set_width(curr+1,total,document.querySelector('#inner'));
+                
+                var next=curr+1;
+                if(next>=total){
+                  return ;
+                }
+                if(!imgs[next] || imgs[next].hasLoaded){
+                  return ;
+                }
+                $(imgs[next]['urls']).each(function(ind,element){
+                  var img=new Image();
+                  img.onload=function(){
+
+                  };
+                  img.src=element;
+                });
+                imgs[next].hasLoaded=true;
             },
             onLeave:function(){
+                active.turnoff.call(this);
             }
         });
 
        
        //执行完
-       new_slider.listen("onEnter",function(curr,total){
-         set_width(curr,total,document.querySelector('#inner'));
-       });
+       // new_slider.listen("onEnter",function(curr,total){
+       //   set_width(curr,total,document.querySelector('#inner'));
+       // });
 
-       var active={
-            turnon:function(){
-                this.classList.remove('hide');
-            },
-            turnoff:function(){
-                 this.classList.add('hide');
-            }
-       }
+     
+       // new_slider.listen("onEnter",function(curr,total){
+       //    active.turnon.call(this);
+       // });
 
-       new_slider.listen("onEnter",function(curr,total){
-          active.turnon.call(this);
-       });
-
-         new_slider.listen("onLeave",function(curr,total){
-          active.turnoff.call(this);
-       });
+       //   new_slider.listen("onLeave",function(curr,total){
+       //    active.turnoff.call(this);
+       // });
     };
 
     window.onload=loaded;

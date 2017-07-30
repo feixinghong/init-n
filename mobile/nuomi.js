@@ -56,52 +56,55 @@ window.F = (function () {
 if (!(!('performance' in window) || !('getEntriesByType' in window.performance) || !(window.performance.getEntriesByType('resource') instanceof Array))) {
 var LOG_REQUEST_URL = window.location.host.indexOf('m.nuomi.com') !== -1 ? '//m.nuomi.com/v.gif?'
 : '//www.nuomi.com/v.gif?';
-window.addEventListener('load', function () {
-/* 不延后一点，loadEventEnd取不到*/
-setTimeout(function () {
-var events = [
-'navigationStart',
-'redirectStart',
-'redirectEnd',
-'fetchStart',
-'domainLookupStart',
-'domainLookupEnd',
-'connectStart',
-'connectEnd',
-'secureConnectionStart',
-'requestStart',
-'responseStart',
-'responseEnd',
-'domLoading',
-'domInteractive',
-'domContentLoadedEventStart',
-'domContentLoadedEventEnd',
-'domComplete',
-'loadEventStart',
-'loadEventEnd'
-];
-var timing = window.performance.timing;
-var zero = timing.navigationStart;
-var mon = document.body.getAttribute('mon') || 'page=unknown';
-var query = ['performance=1', 'zero=' + zero, mon];
-for (var i = 0; i < events.length; i++) {
-var event = events[i];
-var eventTime = timing[event];
-if (typeof eventTime !== 'undefined') {
-var delta = eventTime - zero;
-query.push(event + '=' + (delta < 0 ? 0 : delta));
-}
-}
-var img = document.createElement('img');
-img.style.display = 'none';
-document.body.appendChild(img).src = LOG_REQUEST_URL + query.join('&');
-img.onload = function () {
-document.body.removeChild(img);
-img = null;
-};
-}, 100);
-});
-}
+        window.addEventListener('load', function () {
+        /* 不延后一点，loadEventEnd取不到*/
+        setTimeout(function () {
+        var events = [
+            'navigationStart',
+            'redirectStart',
+            'redirectEnd',
+            'fetchStart',
+            'domainLookupStart',
+            'domainLookupEnd',
+            'connectStart',
+            'connectEnd',
+            'secureConnectionStart',
+            'requestStart',
+            'responseStart',
+            'responseEnd',
+            'domLoading',
+            'domInteractive',
+            'domContentLoadedEventStart',
+            'domContentLoadedEventEnd',
+            'domComplete',
+            'loadEventStart',
+            'loadEventEnd'
+        ];
+        var timing = window.performance.timing;
+        var zero = timing.navigationStart;
+        var mon = document.body.getAttribute('mon') || 'page=unknown';
+        var query = ['performance=1', 'zero=' + zero, mon];
+        for (var i = 0; i < events.length; i++) {
+            var event = events[i];
+            var eventTime = timing[event];
+            if (typeof eventTime !== 'undefined') {
+                var delta = eventTime - zero;
+                query.push(event + '=' + (delta < 0 ? 0 : delta));
+            }
+        }
+        var img = document.createElement('img');
+        img.style.display = 'none';
+
+        document.body.appendChild(img).src = LOG_REQUEST_URL + query.join('&');
+
+        img.onload = function () {
+            document.body.removeChild(img);
+            img = null;
+        };
+
+        }, 100);
+        });
+        }
 })();
 
 // https://passport.weibo.cn/signin/welcome?entry=mweibo&r=http%3A%2F%2Fm.weibo.cn%2Fbeta
@@ -167,7 +170,7 @@ define([
 
             //UIHeader需要释放出来
             this.UIHeader = UIHeader;
-
+            // 有一下接口
             this.interface = [
                 'forward',
                 'back',
@@ -189,6 +192,7 @@ define([
         },
 
         initialize: function (options) {
+            // 模板方法
             this.propertys();
             this.setOption(options);
             this.initViewPort();
@@ -258,7 +262,7 @@ define([
             view.show();
 
         },
-
+        // 组合模式
         hidePageView: function (name) {
             if (name) {
                 if (this.pageviews[name]) this.pageviews[name].hide();
